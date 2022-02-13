@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import Header from "../components/header/Header";
+import Header from "../components/header";
+import { ContainerGlobal } from "./styled";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <ContainerGlobal>
       <Header />
-      <h2>Home Page</h2>
-      <Link href="/promocao">Promoções</Link>
-    </>
+      <p> Página inicial</p>
+    </ContainerGlobal>
   );
 };
 
