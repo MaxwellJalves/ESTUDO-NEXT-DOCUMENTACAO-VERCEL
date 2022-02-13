@@ -5,5 +5,5 @@ export interface IItem {
 
 interface IProduto {
   descricao: string;
-  validade: Date;
+  validade: string;
 }
