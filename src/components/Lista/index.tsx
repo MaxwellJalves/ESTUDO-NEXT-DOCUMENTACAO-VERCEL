@@ -1,4 +1,5 @@
 import * as I from "../../types/iprodutos";
+import * as Data from "../../shared/uteis/data/dataformat";
 const Lista = ({ item, produtos }: I.IItem) => {
   return (
     <div>
@@ -7,7 +8,8 @@ const Lista = ({ item, produtos }: I.IItem) => {
       {produtos.map((p, index) => (
         <li key={index}>
           <h3>{p.descricao}</h3>
-          <p>{`Validade: ${p.validade.getDate()}/0${p.validade.getMonth()}/${p.validade.getFullYear()}`}</p>
+          {console.log(p.validade)}
+          <p>{`Validade: ${Data.getDateFormatBr(p.validade)}`}</p>
         </li>
       ))}
     </div>
